@@ -1,4 +1,1 @@
-
-import { data } from './data.js';
-
-alert(data.message);
+console.log('Hello world');
