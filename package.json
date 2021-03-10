@@ -1,0 +1,22 @@
+{
+  "name": "colorblind-tetris-web",
+  "version": "1.0.0",
+  "description": "Colorblind Tetris for the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jg925/colorblind-tetris-web.git"
+  },
+  "author": "jg925",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jg925/colorblind-tetris-web/issues"
+  },
+  "homepage": "https://github.com/jg925/colorblind-tetris-web#readme",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
+}
