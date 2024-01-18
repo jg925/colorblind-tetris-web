@@ -2,20 +2,20 @@
 type coord = {
   x: number;
   y: number;
-}
+};
 
 type color = {
   r: number;
   g: number;
   b: number;
-}
+};
 
 type t = {
   location: coord;
   color: color;
-}
+};
 
-class Tile {
+/**class Tile {
   x: number;
   y: number;
   color: number;
@@ -27,4 +27,4 @@ class Tile {
 
   //function get_x
 
-}
+}*/

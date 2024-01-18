@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Colorblind Tetris</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <title>Colorblind Tetris</title>
-</head>
-
-<body>
-  <div id="settings">
-
-  </div>
-  <div id="tetris">
-    <div id="holdPiece"></div>
-    <canvas id="game"></canvas>
-    <div id="nextPiece"></div>
-    <div id="idleGame"></div>
-    <!-- need to keep track of score, level, lines?-->
-    <!-- Pause menu?-->
-  </div>
-
-  <!--<script type="module" src="./dist/tetris.js"></script>-->
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
