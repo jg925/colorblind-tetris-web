@@ -1,19 +1,7 @@
 //This will power the tetris game.
-type coord = {
-  x: number;
-  y: number;
-};
 
-type color = {
-  r: number;
-  g: number;
-  b: number;
-};
 
-type t = {
-  location: coord;
-  color: color;
-};
+
 
 /**class Tile {
   x: number;

@@ -1,76 +1,38 @@
-type coord = {
-  x: number;
-  y: number;
-};
+type Coord = [number, number];
 
-type color = {
-  r: number;
-  g: number;
-  b: number;
-};
-
-type t = {
-  location: coord;
-  color: color;
-};
+type Color = [number, number, number];
 
 // functions for generating tiles
 
-function make_coord(x: number, y: number) {
+function make_coord(x: number, y: number): Coord {
   return [x, y];
 }
 
-function make_color(r: number, g: number, b: number) {
+function make_color(r: number, g: number, b: number): Color {
   return [r, g, b];
 }
 
-function make_tile(x, y, r, g, b) {
-  return { location: make_coord(x, y), color: make_color(r, g, b) };
-}
-
-/*make_coord(x, y){
-  return (x,y)
-};
-
-let make_color r g b = (r, g, b)
-
-let make_tile x y r g b = 
-  {
-    location = make_coord x y;
-    color = make_color r g b
-  }
-
-let tile_length = 30 (*sets the tile length *)
-
+//const tile_length = 30;
 
 // functions for getting properties of tiles
+class Tile {
+  location: Coord;
+  color: Color;
 
-let get_x tile = 
-  match tile.location with 
-  | (x,_) -> x
+  constructor(x: number, y: number, r: number, g: number, b: number) {
+    this.location = make_coord(x, y);
+    this.color = make_color(r, g, b);
+  }
 
-let get_y tile = 
-  match tile.location with 
-  | (_,y) -> y
+  move_left() {
+    this.location = make_coord(this.location[0] - 1, this.location[1]);
+  }
 
-let get_color tile = 
-  match tile.color with 
-  | (r,g,b) -> Graphics.rgb r g b
+  move_right() {
+    this.location = make_coord(this.location[0] + 1, this.location[1]);
+  }
 
-let set_x tile x = 
-  {tile with location = (x, (get_y tile))}
-
-let set_y tile y = 
-  {tile with location = ((get_x tile), y)}
-
-
-// functions for generating new tiles from old ones
-
-let move_to tile x y = {tile with location = (x, y)}
-
-let fall tile = move_to tile (get_x tile) (get_y tile - 1)
-
-let move_left tile = move_to tile (get_x tile - 1) (get_y tile)
-
-let move_right tile = move_to tile (get_x tile + 1) (get_y tile)
-*/
+  fall() {
+    this.location = make_coord(this.location[0], this.location[1] - 1);
+  }
+}
